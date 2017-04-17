@@ -10,6 +10,15 @@ namespace ChainOfResponsibility
     {
         public IResposta Proximo { get; set; }
 
+        public RespostaEmCsv(IResposta proximo)
+        {
+            this.Proximo = proximo;
+        }
+        public RespostaEmCsv()
+        {
+            this.Proximo = null;
+        }
+
         public void Responde(Requisicao requisicao, Conta conta)
         {
             if(requisicao.Formato == Formato.CSV)

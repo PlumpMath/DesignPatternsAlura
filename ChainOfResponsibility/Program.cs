@@ -19,7 +19,7 @@ namespace ChainOfResponsibility
         {
             Conta conta = new Conta("Rodrigo", 590);
 
-            Requisicao req = new Requisicao(Formato.XML);
+            Requisicao req = new Requisicao(Formato.CSV);
             DeterminadorDeResposta responde = new DeterminadorDeResposta();
 
             responde.executa(req, conta);
